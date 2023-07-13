@@ -2,10 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 
-const { dummyLink }=require("../controllers/likeController")
-const { createComment } = require("../controllers/commentController");
+const { dummyLink }=require("../controllers/dummy")
 
 
 router.get("/dummyroute", dummyLink);
-router.post("/comments/create", createComment);
+
 module.exports = router;

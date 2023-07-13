@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 
-const blog = require("./routes/blog");
 
+const blog = require("./routes/blog");
 
 app.use("/api/v1",blog);
 
