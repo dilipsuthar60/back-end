@@ -1,6 +1,5 @@
-exports.dummyLink = (req, res) => {
-    console.log("hello");
-     res.status(200).send({
+exports.dummyLink = (req, res) =>{
+     res.status(200).json({
         status: 1,
         message:"succesfully done !!!",
     })

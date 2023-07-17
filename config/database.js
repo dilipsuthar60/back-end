@@ -1,3 +1,5 @@
+// 1 mongodb connection code
+
 // const mongoose = require("mongoose");
 // require("dotenv").config();
 // const connectWithDb = () => {
@@ -6,10 +8,14 @@
 
 
 // module.exports = connectWithDb;
+
+
+
+//2 my-sql connection code
 const mysql = require("mysql");
 
 const connectWithDb = () => {
-    let con = mysql.createConnection({ host: "localhost",user: "root",password: "root"
+    let con = mysql.createConnection({ host: "localhost",user: "root",password: "root",database:'student'
 });
 
 con.connect(function(err) {
