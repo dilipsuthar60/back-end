@@ -6,16 +6,12 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
-
-
 const blog = require("./routes/blog");
 
-app.use("/api/v1",blog);
+app.use("/api/v1", blog);
 
-const connectWithDb = require("./config/database");
-
-connectWithDb();
+const { connection } = require("./config/database");
 
 app.listen(PORT, () => {
-    console.log(`app is runing succesfully ${PORT}`);
-})
+  console.log(`app is runing succesfully ${PORT}`);
+});
