@@ -20,7 +20,7 @@ let connection = mysql.createConnection({
 });
 
 connection.connect(function (err) {
-  if (!!err) {
+  if (err) {
     console.log(err);
   } else {
     console.log("database connected");
