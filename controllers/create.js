@@ -1,5 +1,5 @@
 const connection = require("../config/database");
-exports.create = (req, res) => {
+exports.createStudentData = (req, res) => {
   const { name, email, subject, gender, message } = req.body;
   if (!name || !email || !subject || !gender || !message) {
     return res.status(401).json({

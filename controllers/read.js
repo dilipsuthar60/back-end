@@ -1,5 +1,5 @@
 const connection = require("../config/database");
-exports.read = (req, res) => {
+exports.readStudentData = (req, res) => {
   connection.query("SELECT * FROM studentdata", function (err, rows) {
     if (err) {
       res.status(400).json({

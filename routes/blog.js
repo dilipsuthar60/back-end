@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const { read } = require("../controllers/read");
-const { create } = require("../controllers/create");
+const { readStudentData } = require("../controllers/read");
+const { createStudentData } = require("../controllers/create");
 const { deleteStudentData } = require("../controllers/delete");
-const { update } = require("../controllers/update");
-router.get("/read", read);
-router.post("/create", create);
+const { updateStudentData } = require("../controllers/update");
+router.get("/read", readStudentData);
+router.post("/create", createStudentData);
 router.delete("/delete/:id", deleteStudentData);
-router.post("/update/:id",update)
+router.post("/update/:id", updateStudentData);
 
 
 module.exports = router;
